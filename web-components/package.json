@@ -31,7 +31,7 @@
   "collection": "dist/collection/collection-manifest.json",
   "dependencies": {
     "date-fns": "2.9.0",
-    "prismjs": "1.17.1"
+    "prismjs": "1.21.0"
   },
   "deprecated": false,
   "description": "Pax Web Components Library",

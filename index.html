@@ -9,13 +9,13 @@
 </head>
 <body>
 
-    <h1>Datepicker: funktioniert nicht -> (calender, value, invalid)</h1>
+    <h1>Datepicker: funktioniert nicht -> (Kalender, value, invalid)</h1>
     <pax-item>
         <pax-label for="foo" position="floating">Label</pax-label>
         <pax-datepicker id="foo" name="foo" value="21.07.2020"></pax-datepicker>
     </pax-item>
 
-    <h1>Selector: funktioniert nicht</h1>
+    <h1>Selector: schlechte Anzeige des Selektors</h1>
     <pax-item>
         <pax-label for="foo" position="floating">Label</pax-label>
         <pax-select id="foo" name="foo">
@@ -25,13 +25,13 @@
         </pax-select>
     </pax-item>
 
-    <h1> Input: funktioniert nicht -> (invalid und error message)</h1>
+    <h1> Input (jede component): invalid und error message funktionieren nicht </h1>
     <pax-item>
         <pax-label for="foo" position="floating">Label</pax-label>
         <pax-input id="foo" name="foo" invalid error="Error message"></pax-input>
     </pax-item>
 
-    <h1> basic label und input animation -> keine animation mit dem Label</h1>
+    <h1> Basic label und input animation -> keine animation mit dem Label</h1>
     <pax-grid>
         <pax-row>
           <pax-col>
@@ -42,5 +42,43 @@
           </pax-col>
         </pax-row>
       </pax-grid>
+
+    <h1> Pax-col, mehr Optionen haben</h1>
+    <pax-grid>
+        <pax-row>
+            <pax-col col-md-4>Lorem ipsum</pax-col>
+            <pax-col col-md-4>Lorem ipsum</pax-col>
+            <pax-col col-md-4>Lorem ipsum</pax-col>
+        </pax-row>
+    </pax-grid>
+
+    <pax-grid>
+        <pax-row>
+            <pax-col col-md-2>Lorem ipsum</pax-col>
+            <pax-col col-md-2>Lorem ipsum</pax-col>
+            <pax-col col-md-2>Lorem ipsum</pax-col>
+            <pax-col col-md-2>Lorem ipsum</pax-col>
+            <pax-col col-md-2>Lorem ipsum</pax-col>
+            <pax-col col-md-2>Lorem ipsum</pax-col>
+        </pax-row>
+    </pax-grid>
+
+    <pax-grid>
+        <pax-row>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+            <pax-col col-md-1>Lorem ipsum</pax-col>
+        </pax-row>
+    </pax-grid>
+
 </body>
 </html>

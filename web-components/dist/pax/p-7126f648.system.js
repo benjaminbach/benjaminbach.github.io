@@ -1,1 +1,0 @@
-System.register([],(function(e){"use strict";return{execute:function(){var t=e("c",(function(e){var t;return typeof e==="string"&&e.length>0?(t={},t["pax-color--"+e]=true,t):undefined}))}}}));

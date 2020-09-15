@@ -1,0 +1,1 @@
+System.register(["./p-75980fce.system.js"],(function(e){"use strict";var t,n,r;return{setters:[function(e){t=e.r;n=e.h;r=e.H}],execute:function(){var s="";var i=function(){function e(e){t(this,e);this.selected=false;this.disabled=false}e.prototype.render=function(){return n(r,{role:"option"})};return e}();e("pax_select_option",i);i.style=s}}}));

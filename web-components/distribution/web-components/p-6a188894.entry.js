@@ -1,0 +1,1 @@
+import{r as e,h as r,H as s}from"./p-615b7767.js";class t{constructor(r){e(this,r)}render(){return r(s,null,r("slot",null))}}t.style=":host{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}";export{t as pax_pagination}

@@ -2,86 +2,12 @@
 <html>
 <head>
  <!-- include web components -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,900&display=swap">
-<script type="module" src="web-components/dist/pax/pax.esm.js"></script>
-<script nomodule src="web-components/dist/pax/pax.js"></script>
-<link rel="stylesheet" type="text/css" href="web-components/dist/pax/pax.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,900&amp;display=swap">
+<script type="module" src="/web-components/distribution/web-components/pax.esm.js"></script>
+<script nomodule="" src="/web-components/distribution/web-components/pax.js"></script>
+<link rel="stylesheet" type="text/css" href="/web-components/distribution/web-components/pax.css">
 </head>
 <body>
-
-    <h1>Datepicker: funktioniert nicht -> (Kalender, value, invalid)</h1>
-    <pax-item>
-        <pax-label for="foo" position="floating">Label</pax-label>
-        <pax-datepicker id="foo" name="foo" value="21.07.2020"></pax-datepicker>
-    </pax-item>
-
-    <h1>Selector: schlechte Anzeige des Selektors</h1>
-    <pax-item>
-        <pax-label for="foo" position="floating">Label</pax-label>
-        <pax-select id="foo" name="foo">
-            <pax-select-option value="1">Option 1</pax-select-option>
-            <pax-select-option value="2">Option 2</pax-select-option>
-            <pax-select-option value="3">Option 3</pax-select-option>
-        </pax-select>
-    </pax-item>
-
-    <h1> Input (jede component): invalid und error message funktionieren nicht </h1>
-    <pax-item>
-        <pax-label for="foo" position="floating">Label</pax-label>
-        <pax-input id="foo" name="foo" invalid error="Error message"></pax-input>
-    </pax-item>
-
-    <h1> Basic label und input animation -> keine animation mit dem Label</h1>
-    <pax-grid>
-        <pax-row>
-          <pax-col>
-            <pax-item>
-              <pax-label for="foo" position="floating">Label</pax-label>
-              <pax-input id="foo" name="foo"></pax-input>
-            </pax-item>
-          </pax-col>
-        </pax-row>
-      </pax-grid>
-
-    <h1> Pax-col, mehr Optionen haben</h1>
-    <h2> Beispiel - col-md-4:</h2>
-    <pax-grid>
-        <pax-row>
-            <pax-col col-md-4>Lorem ipsum</pax-col>
-            <pax-col col-md-4>Lorem ipsum</pax-col>
-            <pax-col col-md-4>Lorem ipsum</pax-col>
-        </pax-row>
-    </pax-grid>
-
-    <h2> Beispiel - col-md-2:</h2>
-    <pax-grid>
-        <pax-row>
-            <pax-col col-md-2>Lorem ipsum</pax-col>
-            <pax-col col-md-2>Lorem ipsum</pax-col>
-            <pax-col col-md-2>Lorem ipsum</pax-col>
-            <pax-col col-md-2>Lorem ipsum</pax-col>
-            <pax-col col-md-2>Lorem ipsum</pax-col>
-            <pax-col col-md-2>Lorem ipsum</pax-col>
-        </pax-row>
-    </pax-grid>
-
-    <h2> Beispiel - col-md-1:</h2>
-    <pax-grid>
-        <pax-row>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-            <pax-col col-md-1>Lorem ipsum</pax-col>
-        </pax-row>
-    </pax-grid>
 
 </body>
 </html>

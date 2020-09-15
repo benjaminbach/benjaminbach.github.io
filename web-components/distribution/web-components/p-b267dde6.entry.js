@@ -1,0 +1,1 @@
+import{r,h as s,H as t}from"./p-615b7767.js";class o{constructor(s){r(this,s),this.selected=!1,this.disabled=!1}render(){return s(t,{role:"option"})}}o.style="";export{o as pax_select_option}

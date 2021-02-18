@@ -1,0 +1,151 @@
+{
+  "issuer": "https://authportdev.pax.ch/oidcmedium/oidc/",
+  "authorization_endpoint": "https://authportdev.pax.ch/oidcmedium/oidc/authorize",
+  "token_endpoint": "https://authportdev.pax.ch/oidcmedium/oidc/token",
+  "userinfo_endpoint": "https://authportdev.pax.ch/oidcmedium/oidc/userinfo",
+  "device_authorization_endpoint": "https://authportdev.pax.ch/oidcmedium/oidc/devicecode",
+  "end_session_endpoint": "https://authportdev.pax.ch/oidcmedium/oidc/endsession",
+  "jwks_uri": "https://authportdev.pax.ch/oidcmedium/oidc/jwk",
+  "registration_endpoint": "https://authportdev.pax.ch/oidcmedium/oidc/register",
+  "scopes_supported": [
+    "openid",
+    "profile",
+    "email",
+    "phone",
+    "address",
+    "offline_access"
+  ],
+  "response_types_supported": [
+    "code",
+    "token"
+  ],
+  "grant_types_supported": [
+    "authorization_code",
+    "implicit",
+    "urn:ietf:params:oauth:grant-type:jwt-bearer",
+    "client_credentials",
+    "urn:ietf:params:oauth:grant_type:redelegate",
+    "urn:ietf:params:oauth:grant-type:device_code"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "userinfo_signing_alg_values_supported": [
+    "HS256",
+    "HS384",
+    "HS512",
+    "RS256",
+    "RS384",
+    "RS512"
+  ],
+  "userinfo_encryption_alg_values_supported": [
+    "RSA-OAEP",
+    "RSA-OAEP-256",
+    "RSA1_5"
+  ],
+  "userinfo_encryption_enc_values_supported": [
+    "A256CBC+HS512",
+    "A256GCM",
+    "A192GCM",
+    "A128GCM",
+    "A128CBC-HS256",
+    "A192CBC-HS384",
+    "A256CBC-HS512",
+    "A128CBC+HS256"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "HS256",
+    "HS384",
+    "HS512",
+    "RS256",
+    "RS384",
+    "RS512",
+    "none"
+  ],
+  "id_token_encryption_alg_values_supported": [
+    "RSA-OAEP",
+    "RSA-OAEP-256",
+    "RSA1_5"
+  ],
+  "id_token_encryption_enc_values_supported": [
+    "A256CBC+HS512",
+    "A256GCM",
+    "A192GCM",
+    "A128GCM",
+    "A128CBC-HS256",
+    "A192CBC-HS384",
+    "A256CBC-HS512",
+    "A128CBC+HS256"
+  ],
+  "request_object_signing_alg_values_supported": [
+    "HS256",
+    "HS384",
+    "HS512",
+    "RS256",
+    "RS384",
+    "RS512"
+  ],
+  "request_object_encryption_alg_values_supported": [
+    "RSA-OAEP",
+    "RSA-OAEP-256",
+    "RSA1_5"
+  ],
+  "request_object_encryption_enc_values_supported": [
+    "A256CBC+HS512",
+    "A256GCM",
+    "A192GCM",
+    "A128GCM",
+    "A128CBC-HS256",
+    "A192CBC-HS384",
+    "A256CBC-HS512",
+    "A128CBC+HS256"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_post",
+    "client_secret_basic",
+    "client_secret_jwt",
+    "private_key_jwt"
+  ],
+  "token_endpoint_auth_signing_alg_values_supported": [
+    "HS256",
+    "HS384",
+    "HS512",
+    "RS256",
+    "RS384",
+    "RS512"
+  ],
+  "claim_types_supported": [
+    "normal"
+  ],
+  "claims_supported": [
+    "sub",
+    "name",
+    "preferred_username",
+    "given_name",
+    "family_name",
+    "middle_name",
+    "nickname",
+    "profile",
+    "picture",
+    "website",
+    "gender",
+    "zoneinfo",
+    "locale",
+    "updated_at",
+    "birthdate",
+    "email",
+    "email_verified",
+    "phone_number",
+    "phone_number_verified",
+    "address"
+  ],
+  "service_documentation": "https://authportdev.pax.ch/oidcmedium/oidc/about",
+  "claims_parameter_supported": false,
+  "request_parameter_supported": true,
+  "request_uri_parameter_supported": false,
+  "require_request_uri_registration": false,
+  "op_policy_uri": "https://authportdev.pax.ch/oidcmedium/oidc/about",
+  "op_tos_uri": "https://authportdev.pax.ch/oidcmedium/oidc/about",
+  "introspection_endpoint": "https://authportdev.pax.ch/oidcmedium/oidc/introspect",
+  "revocation_endpoint": "https://authportdev.pax.ch/oidcmedium/oidc/revoke"
+}

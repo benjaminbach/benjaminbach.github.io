@@ -30,8 +30,7 @@ button2.addEventListener('click', async _ => {
       credentials: 'include' 
     });
     console.log('Completed!', response); 
-    console.log('meinsuperheader: ' + response.headers.get('meinsuperheader'));
-    console.log('cookie: ' + response.headers.get('cookie'));
+    console.log('cookies: ' + document.cookie);
   } catch(err) {
     console.error(`Error: ${err}`);
   }

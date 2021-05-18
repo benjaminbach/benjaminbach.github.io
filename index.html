@@ -1,41 +1,40 @@
 <html>
-    <body>
-        <h1>Hallo Cookie</h1>
-        <button id="post-btn">I'm a button</button>
-        <button id="get-btn">I'm a button</button>
-<script>
-    const button = document.getElementById('post-btn');
-
-button.addEventListener('click', async _ => {
-  try {     
-    const response = await fetch('http://localhost:3000/cookie', {
-      method: 'post',
-      credentials: 'include' ,
-      body: {
-        // Your body
-      }
-    });
-    console.log('Completed!', response);
-  } catch(err) {
-    console.error(`Error: ${err}`);
-  }
-});
-
-const button2 = document.getElementById('get-btn');
-
-button2.addEventListener('click', async _ => {
-  try {     
-    const response = await fetch('http://localhost:3000/data', {
-      method: 'get',
-      credentials: 'include' 
-    });
-    console.log('Completed!', response); 
-    console.log('cookies: ' + document.cookie);
-  } catch(err) {
-    console.error(`Error: ${err}`);
-  }
-});
-</script>
-        
-    </body>
+   <body>
+      <h1>Hallo Cookie</h1>
+      <button id="post-btn">Set Cookie Http Request</button>
+      <button id="get-btn">Log Header Http Request</button>
+      <script>
+         const button = document.getElementById('post-btn');
+         
+         button.addEventListener('click', async _ => {
+         try {     
+         const response = await fetch('http://localhost:3000/cookie', {
+           method: 'post',
+           credentials: 'include' ,
+           body: {
+             // Your body
+           }
+         });
+         console.log('Completed!', response);
+         } catch(err) {
+         console.error(`Error: ${err}`);
+         }
+         });
+         
+         const button2 = document.getElementById('get-btn');
+         
+         button2.addEventListener('click', async _ => {
+         try {     
+         const response = await fetch('http://localhost:3000/data', {
+           method: 'get',
+           credentials: 'include' 
+         });
+         console.log('Completed!', response); 
+         console.log('cookies: ' + document.cookie);
+         } catch(err) {
+         console.error(`Error: ${err}`);
+         }
+         });
+      </script>
+   </body>
 </html>

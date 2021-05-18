@@ -1,13 +1,40 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <!-- include web components -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,900&amp;display=swap">
-    <script type="module" src="/web-components/distribution/web-components/pax.esm.js"></script>
-    <script nomodule="" src="/web-components/distribution/web-components/pax.js"></script>
-    <link rel="stylesheet" type="text/css" href="/web-components/distribution/web-components/pax.css">
-</head>
-<body>
-</body>
+    <body>
+        <h1>Hallo Cookie</h1>
+        <button id="post-btn">I'm a button</button>
+        <button id="get-btn">I'm a button</button>
+<script>
+    const button = document.getElementById('post-btn');
+
+button.addEventListener('click', async _ => {
+  try {     
+    const response = await fetch('http://localhost:3000/cookie', {
+      method: 'post',
+      body: {
+        // Your body
+      }
+    });
+    console.log('Completed!', response);
+  } catch(err) {
+    console.error(`Error: ${err}`);
+  }
+});
+
+const button2 = document.getElementById('get-btn');
+
+button2.addEventListener('click', async _ => {
+  try {     
+    const response = await fetch('http://localhost:3000/data', {
+      method: 'get'
+    });
+    console.log('Completed!', response); 
+    console.log('meinsuperheader: ' + response.headers.get('meinsuperheader'));
+    console.log('cookie: ' + response.headers.get('cookie'));
+  } catch(err) {
+    console.error(`Error: ${err}`);
+  }
+});
+</script>
+        
+    </body>
 </html>

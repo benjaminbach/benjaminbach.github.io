@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h1>Demo</h1>
+        <iframe  width="500" height="500" src="https://benjaminbach.github.io" sandbox="allow-forms allow-scripts allow-same-origin"></iframe>
+        <script>
+            window.addEventListener("message", (event) => {
+                console.log(event)
+                const message = event.data;
+                if (message.startsWith('wam_jwt')) {
+                    console.log('Hier ist im CRM: ' + message);
+                }
+            }, false);
+        </script>
+    </body>
+</html>

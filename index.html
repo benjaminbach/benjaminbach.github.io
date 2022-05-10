@@ -1,1 +1,43 @@
-hallo welt
+<html>
+    <script>
+        const wamUrl = 'https://authportdev.pax.ch/oidcmedium/oidc';
+        const client_id = '6bd8da9d-abd3-445d-a216-716bcf3e4c58';
+        const scope = 'openid profile groups email'
+        const jwtUrl = 'https://portdev.pax.ch:1443/oidc-provider/userinfo'
+        const redirect_uri =  window.origin + ''; // Hier den relativen Pfad Anhängen falls nötig oder oder window.location verwenden und ?code= ... abschneiden
+
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const code = urlSearchParams.get('code');
+        if (!code) {
+            window.location = `${wamUrl}/authorize?client_id=${client_id}&redirect_uri=${encodeURI(redirect_uri)}&response_type=code&scope=${encodeURI(scope)}`
+        } else {
+            getJWT(code);       
+        }
+
+        async function getJWT(code) { 
+            const response1 = await fetch("https://apsertst.pax.ch/oidcmedium/oidc/token", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({
+                    grant_type: 'authorization_code',
+                    client_id,
+                    code,
+                    redirect_uri
+                }).toString()
+            });
+            const { access_token } = await response1.json();
+            
+            const response2 = await fetch(jwtUrl, {
+                method: 'POST',
+                headers: {  
+                    Authorization: `Bearer ${access_token}`,
+                    Accept: 'application/jwt'
+                },
+                body: null
+            });
+            const jwt = await response2.text();
+            console.log('Send JWT to parent: ' + jwt);          
+            parent.postMessage("wam_jwt", jwt)
+        }
+    </script>
+</html>

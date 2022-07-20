@@ -83,12 +83,13 @@
    <div class="card"  style="width: 36rem;">
       <div class="row-2">
         <p class="card-titel">Pax Kundenportal<p>
+        <img src="https://github.com/benjaminbach/benjaminbach.github.io/blob/master/pax_v_neg_rgb.png">
       </div>
       <div class="card-body middle">
         <h3>Login Kundenportal<h3>
         <div class="middle-text">
-            <p class="middle-text-one">Loggen Sie sich mit Ihrem Benutzerkonto<p>
-            <p class="middle-text-two">im Kundenportal ein.<p>
+            <p id="middle-text-one" class="card-text">Loggen Sie sich mit Ihrem Benutzerkonto<p>
+            <p id="middle-text-two" class="card-text">im Kundenportal ein.<p>
         </div>
       </div>
       <div class="form">
@@ -102,8 +103,12 @@
   <script>
     const ForgotPassword = document.getElementById("forgotPassword");
     const Footer = document.getElementById("card-footer");
+    const Email = document.getElementById("email");
+    const Password = document.getElementById("password");
+    Email.classList.add("form-control");
+    Password.classList.add("form-control");
     Footer.appendChild(ForgotPassword);
-    console.log("Test22");
+    console.log("Test222");
   </script>
 </body>
 </html>

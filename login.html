@@ -84,6 +84,10 @@
     .intro {
         display: none;
         }
+    .konto-links {
+        display: flex;
+        align-items: baseline;
+        }
     #top-text {
         padding: 0.5rem 0.5rem 0.5rem 1rem;
         }
@@ -111,6 +115,21 @@
         color: white;
         font-size: 2em;
         }
+    #arrow1 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-weight: bold;
+        font-size: 2.5em;
+        color: #8ccd0f;
+        font-weight: 100;
+        }
+     #arrow2 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-weight: bold;
+        font-size: 2.5em;
+        color: #8ccd0f;
+        font-weight: 100;
         }
     </style>
 </head>
@@ -139,11 +158,11 @@
       </div>
       <div id="card-footer" class="card-body">
           <div class="konto-link">
-              <i class="bi bi-arrow-right"></i>
+              <i id="arrow1" class="bi bi-arrow-right"></i>
               <a class="">Kundenportal-Konto erstellen</a>
           </div>
           <div id="forgot-password">
-              <i class="bi bi-arrow-right"></i>
+              <i id="arrow2" class="bi bi-arrow-right"></i>
           </div>
           <div class="card-body bottom">
               <p>Brauchen Sie Hilfe ?</p>

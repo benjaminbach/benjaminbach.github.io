@@ -250,7 +250,9 @@
     
     Email.addEventListener("change", function() {
         if(document.getElementById("email").value !== "") {
+            document.getElementByClass(".error.itemLevel").style.display = "none";
         if (validRegex.test(document.getElementById("email").value)) {
+            document.getElementByClass(".error.itemLevel").style.display = "none";
             console.log("Das funktioniert");
         }
         else {

@@ -247,6 +247,10 @@
     document.getElementById("next").innerHTML = "";
     Button.appendChild(Arrow);
     console.log("Test222");
+      
+    if(document.getElementByClass(".error.itemLevel").style.display === "block"){
+       document.getElementByClass(".error.itemLevel").style.display = "none";
+    }
     
     Email.addEventListener("change", function() {
         if(document.getElementById("email").value !== "") {

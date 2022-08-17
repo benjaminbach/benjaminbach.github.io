@@ -248,14 +248,16 @@
     Button.appendChild(Arrow);
     console.log("Test222");
       
-   
+    document.getElementById("localAccountForm").addEventListener("JavaScript:void(0);", function() {
+         document.getElementsByClassName(".error.itemLevel").style.display = "none";
+    });
       
-    Button.addEventListener("onsubmit", function() {
+    document.getElementById("next").addEventListener("onsubmit", function() {
          document.getElementsByClassName(".error.itemLevel").style.display = "none";
          console.log("working");
     });
     
-    Email.addEventListener("change", function() {
+    document.getElementById("email").addEventListener("change", function() {
         if(document.getElementById("email").value !== "") {
             document.getElementsByClassName(".error.itemLevel").style.display = "none";
         if (validRegex.test(document.getElementById("email").value)) {

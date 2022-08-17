@@ -246,8 +246,8 @@
     console.log("Test222");
     
     Email.addEventListener("change", function() {
-        if(Email.value !== "")
-        if (validRegex.test(Email.value)) {
+        if(document.getElementById("email").value !== "") {
+        if (validRegex.test(document.getElementById("email").value)) {
             console.log("Das funktioniert");
         }
         else {

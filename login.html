@@ -248,14 +248,12 @@
     Button.appendChild(Arrow);
     console.log("Test222");
       
-    document.getElementById("localAccountForm").addEventListener("JavaScript:void(0);", function() {
-         document.getElementsByClassName(".error.itemLevel").style.display = "none";
-    });
+   
       
-    document.getElementById("next").addEventListener("onsubmit", function() {
-         document.getElementsByClassName(".error.itemLevel").style.display = "none";
-         console.log("working");
-    });
+    if(document.getElementsByClassName(".error.itemLevel").style.display == "block") {
+       document.getElementsByClassName(".error.itemLevel").style.display = "none";
+       console.log("Jaaaa");
+    }
     
     document.getElementById("email").addEventListener("change", function() {
         if(document.getElementById("email").value !== "") {

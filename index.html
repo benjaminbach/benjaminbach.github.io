@@ -1,43 +1,13 @@
-<html>
-    <script>
-        const wamUrl = 'https://authportdev.pax.ch/oidcmedium/oidc';
-        const client_id = '6bd8da9d-abd3-445d-a216-716bcf3e4c58';
-        const scope = 'openid profile groups email'
-        const jwtUrl = 'https://portdev.pax.ch:1443/oidc-provider/userinfo'
-        const redirect_uri =  window.origin + ''; // Hier den relativen Pfad Anhängen falls nötig oder oder window.location verwenden und ?code= ... abschneiden
-
-        const urlSearchParams = new URLSearchParams(window.location.search);
-        const code = urlSearchParams.get('code');
-        if (!code) {
-            window.location = `${wamUrl}/authorize?client_id=${client_id}&redirect_uri=${encodeURI(redirect_uri)}&response_type=code&scope=${encodeURI(scope)}`
-        } else {
-            getJWT(code);       
-        }
-
-        async function getJWT(code) { 
-            const response1 = await fetch(`${wamUrl}/token`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams({
-                    grant_type: 'authorization_code',
-                    client_id,
-                    code,
-                    redirect_uri
-                }).toString()
-            });
-            const { access_token } = await response1.json();
-            
-            const response2 = await fetch(jwtUrl, {
-                method: 'POST',
-                headers: {  
-                    Authorization: `Bearer ${access_token}`,
-                    Accept: 'application/jwt'
-                },
-                body: null
-            });
-            const jwt = await response2.text();
-            console.log('Send JWT to parent: ' + jwt);          
-            parent.postMessage("wam_jwt: " + jwt, "*")
-        }
-    </script>
+<!doctype html>
+<html lang="en" data-critters-container>
+<head>
+  <meta charset="utf-8">
+  <title>Dbapp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+<body>
+  <app-root></app-root>
+<script src="runtime.23e70727b17e5021.js" type="module"></script><script src="polyfills.b1749dc8bd885887.js" type="module"></script><script src="main.a5aca7c4bd9b40f7.js" type="module"></script></body>
 </html>
